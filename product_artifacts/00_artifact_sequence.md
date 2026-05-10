@@ -13,8 +13,8 @@ Do not generate the full artifact set in one pass. Each artifact should be draft
 | Order | Artifact | Proposed File | Status | Primary Skill(s) |
 |---:|---|---|---|---|
 | 1 | Product framing / product brief | `01_product_framing_brief.md` | Drafted | `pm-product-strategy`, `positioning-statement`, `problem-statement` |
-| 2 | Problem statement | `02_problem_statement.md` | Pending | `problem-statement`, `pm-product-strategy` |
-| 3 | Opportunity framing | `03_opportunity_framing.md` | Pending | `opportunity-solution-tree`, `lean-ux-canvas` |
+| 2 | Problem statement | `02_problem_statement.md` | Drafted | `problem-statement`, `pm-product-strategy` |
+| 3 | Opportunity framing | `03_opportunity_framing.md` | Drafted | `opportunity-solution-tree`, `lean-ux-canvas` |
 | 4 | ICP / customer segmentation | `04_icp_customer_segmentation.md` | Pending | `proto-persona`, `jobs-to-be-done` |
 | 5 | Personas or proto-personas | `05_proto_personas.md` | Pending | `proto-persona` |
 | 6 | Jobs-to-be-done | `06_jobs_to_be_done.md` | Pending | `jobs-to-be-done` |

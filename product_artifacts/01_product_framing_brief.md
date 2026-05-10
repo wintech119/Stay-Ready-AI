@@ -16,11 +16,11 @@ StayReady AI is a white-labeled, WhatsApp-first AI concierge and lead-conversion
 
 ## Product Summary
 
-StayReady AI turns fragmented guest conversations from WhatsApp-style messaging, website inquiries, email, and other channels into structured, staff-ready workflows for premium villa operators.
+StayReady AI turns fragmented guest conversations and staff-captured guest needs from WhatsApp-style messaging, website inquiries, email, phone, in-person conversations, villa staff interactions, and informal notes into structured, staff-ready workflows for premium villa operators.
 
 Jamaica is the launch wedge and validation market, not the long-term boundary. The product should be designed as a globally reusable concierge operations system for premium villa and staffed-stay operators, with Jamaica-specific workflows used first to create depth, credibility, and a repeatable playbook.
 
-It helps villa teams capture and qualify direct leads, answer common questions from approved villa information, collect pre-arrival details, coordinate common service requests, support in-stay questions, route incidents, and follow up after checkout.
+It helps villa teams capture and qualify direct leads, answer common questions from approved villa information, collect pre-arrival details, coordinate common service requests, support in-stay questions, route incidents, log offline guest requests, and follow up after checkout.
 
 The product should not feel like an AI chatbot replacing hospitality staff. It should feel like a branded operating layer that helps human teams deliver smoother, faster, more organized concierge service.
 
@@ -58,13 +58,13 @@ The primary buyer is the owner/operator, villa portfolio manager, luxury villa a
 
 ## Core Problem
 
-Premium villa operators receive guest inquiries and guest requests across fragmented channels such as WhatsApp, websites, email, phone, and OTA messaging.
+Premium villa operators receive guest inquiries and guest requests across fragmented digital and offline channels such as WhatsApp, websites, email, phone, OTA messaging, in-person conversations, villa staff interactions, and informal notes.
 
-Much of this communication is handled manually, which creates slow responses, missed direct leads, repeated questions, messy WhatsApp threads, incomplete arrival details, chef/grocery/dietary back-and-forth, transfer coordination gaps, excursion request confusion, in-stay support delays, incident response delays, weak post-stay follow-up, and unclear staff handoffs.
+Much of this communication is handled manually, which creates slow responses, missed direct leads, repeated questions, messy WhatsApp threads, incomplete arrival details, chef/grocery/dietary back-and-forth, transfer coordination gaps, excursion request confusion, in-stay support delays, incident response delays, weak post-stay follow-up, and unclear staff handoffs. Important guest intent can also live only in staff memory, personal chats, disconnected notes, or a verbal exchange that never becomes visible, owned, or trackable.
 
 ## Product Promise
 
-StayReady AI helps villa teams respond faster, capture more direct leads, collect the right guest information earlier, organize guest requests across the stay journey, and route complex guest needs cleanly without replacing staff or existing systems.
+StayReady AI helps villa teams respond faster, capture more direct leads, collect the right guest information earlier, organize guest requests across the stay journey, and route complex guest needs cleanly without replacing staff or existing systems. This includes guest needs that arrive directly through digital channels and guest needs captured by staff after phone calls, in-person conversations, or informal villa interactions.
 
 ## Strategic Positioning
 
@@ -78,6 +78,7 @@ StayReady AI should be positioned as:
 - Concierge operations overlay
 - Lead-conversion and guest-readiness layer
 - Globally extensible operating model
+- Staff-captured source channel support
 
 Jamaica-first means the product starts with a focused geography, local service patterns, and a sharp first customer segment. It should not imply that the product is only for Jamaica. Over time, the system should adapt to other premium villa markets by swapping in market-specific knowledge bases, service categories, escalation rules, partner lists, and brand voice controls.
 
@@ -105,6 +106,7 @@ The prototype should include:
 - Guest-facing WhatsApp-style messaging
 - Guest-facing website inquiry
 - Lightweight operator dashboard
+- Staff-captured request and incident logging
 - Lead capture and qualification
 - Approved knowledge-base response behavior
 - Pre-arrival intake
@@ -127,6 +129,30 @@ Operators may not know they need a dashboard until they see how StayReady AI tra
 
 The dashboard should remain lightweight. It should not become a PMS, CRM, task manager, dispatch system, owner portal, staff scheduling system, or enterprise admin console.
 
+## Offline And Staff-Captured Communication
+
+StayReady AI should account for guest needs that originate outside digital guest channels, including in-person conversations, phone calls, villa staff interactions, and informal notes.
+
+These moments should be treated as staff-captured source channels, not automated guest conversations. When a guest makes a request or reports an issue in person, an operator or staff member can initiate the workflow on the guest's behalf through the dashboard.
+
+The goal is to prevent important guest intent from living only in staff memory, personal chats, or disconnected notes.
+
+For prototype purposes, workflows should support a lightweight `Log guest request` or `Add incident` action with:
+
+- Stay or guest
+- Source channel: WhatsApp-style, website inquiry, phone, in person, staff note
+- Captured by
+- Free-text note
+- Request or incident type
+- Urgency
+- Owner
+- Status
+- Optional guest confirmation message
+
+The system may use AI to structure the staff-entered note, identify missing details, suggest urgency, draft a guest confirmation, and recommend routing. A human remains responsible for confirming the request, assigning ownership, and sending any guest-facing response.
+
+This reinforces StayReady AI as a concierge operations overlay rather than a chatbot. It captures the full operating reality of premium villa service: some guest needs arrive digitally, while others happen in person and still need to become visible, owned, and trackable.
+
 ## Six Demo Workflows
 
 ### 1. Inquiry and Lead Capture
@@ -147,7 +173,7 @@ A guest asks what to do or requests tours, restaurants, experiences, private che
 
 ### 5. Incident Handling and Recovery
 
-A guest reports an issue such as an AC problem, water issue, Wi-Fi issue, maintenance concern, late driver, or urgent service problem. StayReady AI collects details, requests a photo if appropriate, tags urgency, summarizes the issue, assigns or recommends an owner, sends a safe interim response, and tracks status.
+A guest reports an issue such as an AC problem, water issue, Wi-Fi issue, maintenance concern, late driver, or urgent service problem. The issue may arrive through a digital guest channel or be logged by staff after an in-person or phone interaction. StayReady AI collects details, requests a photo if appropriate, tags urgency, summarizes the issue, assigns or recommends an owner, sends or drafts a safe interim response, and tracks status.
 
 ### 6. Post-Stay Follow-Up
 
@@ -161,6 +187,7 @@ In scope:
 
 - Direct inquiry capture
 - Website inquiry and WhatsApp-style guest experience
+- Staff-captured source channels for phone, in-person, and staff-note requests
 - Grounded responses from approved villa/property content
 - Lead capture and qualification
 - Structured pre-arrival intake
@@ -168,6 +195,7 @@ In scope:
 - In-stay support for common questions
 - Excursion/activity recommendation and request capture
 - Incident triage and recovery workflow
+- Lightweight `Log guest request` and `Add incident` actions
 - Post-stay follow-up
 - Human handoff queue
 - Internal notes and AI-generated summaries
@@ -198,12 +226,17 @@ AI may:
 - Collect structured information
 - Draft responses
 - Summarize conversations
+- Structure staff-entered notes
+- Identify missing request or incident details
 - Tag urgency
+- Suggest urgency
 - Recommend routing
+- Draft optional guest confirmation messages
 - Create internal handoff notes
 
 Humans must handle:
 
+- Confirming staff-captured request or incident records
 - Sensitive situations
 - Urgent incidents
 - Ambiguous guest complaints
@@ -236,6 +269,7 @@ Potential proof metrics include:
 - Repeat-stay offer engagement rate
 - Staff time saved
 - Handoff rate
+- Percentage of staff-captured requests/incidents with owner and status
 - Escalation quality
 - Guest communication satisfaction
 
@@ -248,6 +282,7 @@ Potential proof metrics include:
 - Human-in-the-loop controls make AI feel safer for luxury hospitality operators.
 - Post-stay follow-up is useful as a lightweight workflow, not a full CRM.
 - The Jamaica-first playbook can generalize to other premium villa markets without becoming a generic hotel guest platform.
+- Staff will use lightweight dashboard actions to capture important phone, in-person, and informal guest needs when the workflow is faster than relying on memory or personal messages.
 
 ## Next Artifact
 
